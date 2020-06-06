@@ -6,6 +6,7 @@
 
 namespace PanjiNamjaElf\Kaguya\Tests;
 
+use Laravel\Ui\UiServiceProvider;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 use PanjiNamjaElf\Kaguya\KaguyaServiceProvider;
 
@@ -21,6 +22,7 @@ abstract class TestCase extends BaseTestCase
     protected function getPackageProviders($app)
     {
         return [
+            UiServiceProvider::class,
             KaguyaServiceProvider::class,
         ];
     }
@@ -34,12 +36,14 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        $this->app->setBasePath(__DIR__.'/../');
+        $this->app->setBasePath(__DIR__ . '/../');
 
         $this->loadMigrationsFrom([
             '--database' => 'testing',
-            '--path'     => realpath(__DIR__.'/database/migrations'),
+            '--path'     => realpath(__DIR__ . '/database/migrations'),
         ]);
+
+        $this->app->make('router')->auth();
     }
 
     /**
@@ -52,6 +56,6 @@ abstract class TestCase extends BaseTestCase
     protected function getEnvironmentSetUp($app)
     {
         $app['config']->set('app.debug', env('APP_DEBUG', true));
-        $app['config']->set('logging.channels.single.path', __DIR__.'/../logs/kaguya_'.date('Y.m.d_His').'.log');
+        $app['config']->set('logging.channels.single.path', __DIR__ . '/../logs/kaguya_' . date('Y.m.d_His') . '.log');
     }
 }
