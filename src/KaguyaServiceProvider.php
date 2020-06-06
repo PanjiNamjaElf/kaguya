@@ -62,7 +62,7 @@ class KaguyaServiceProvider extends ServiceProvider
     {
         Route::group($this->routeConfiguration(), function () {
             Route::get('/', 'SettingController@index')->name('settings');
-            Route::post('/', 'SettingController@store')->name('settings');
+            Route::post('/', 'SettingController@store');
         });
     }
 
