@@ -2,7 +2,6 @@
 
 /**
  * @author   Panji Setya Nur Prawira
- * @package  Kaguya
  */
 
 namespace PanjiNamjaElf\Kaguya;
@@ -27,11 +26,11 @@ class KaguyaServiceProvider extends ServiceProvider
         Setting::observe(SettingObserver::class);
 
         $this->loadTranslationsFrom(
-            __DIR__ . '/../resources/lang', 'kaguya'
+            __DIR__.'/../resources/lang', 'kaguya'
         );
 
         $this->loadViewsFrom(
-            __DIR__ . '/../resources/views', 'kaguya'
+            __DIR__.'/../resources/views', 'kaguya'
         );
     }
 
@@ -42,7 +41,7 @@ class KaguyaServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/kaguya.php', 'kaguya');
+        $this->mergeConfigFrom(__DIR__.'/../config/kaguya.php', 'kaguya');
 
         $this->app->singleton('kaguya', function () {
             return new Kaguya();
@@ -76,23 +75,23 @@ class KaguyaServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../database/migrations' => database_path('migrations'),
+                __DIR__.'/../database/migrations' => database_path('migrations'),
             ], 'kaguya-migrations');
 
             $this->publishes([
-                __DIR__ . '/../public' => public_path('vendor/kaguya'),
+                __DIR__.'/../public' => public_path('vendor/kaguya'),
             ], 'kaguya-assets');
 
             $this->publishes([
-                __DIR__ . '/../config/kaguya.php' => config_path('kaguya.php'),
+                __DIR__.'/../config/kaguya.php' => config_path('kaguya.php'),
             ], 'kaguya-config');
 
             $this->publishes([
-                __DIR__ . '/../resources/views' => resource_path('views/vendor/kaguya'),
+                __DIR__.'/../resources/views' => resource_path('views/vendor/kaguya'),
             ], 'kaguya-views');
 
             $this->publishes([
-                __DIR__ . '/../resources/lang' => resource_path('lang/vendor/kaguya'),
+                __DIR__.'/../resources/lang' => resource_path('lang/vendor/kaguya'),
             ], 'kaguya-translations');
         }
     }
