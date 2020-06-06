@@ -2,7 +2,6 @@
 
 /**
  * @author   Panji Setya Nur Prawira
- * @package  Kaguya
  */
 
 namespace PanjiNamjaElf\Kaguya\Console;
