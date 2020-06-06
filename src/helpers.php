@@ -2,9 +2,7 @@
 
 /**
  * @author   Panji Setya Nur Prawira
- * @package  Kaguya
  */
-
 if (! function_exists('setting')) {
     /**
      * Get / set the specified setting value.
