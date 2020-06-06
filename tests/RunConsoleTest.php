@@ -6,7 +6,7 @@
 
 namespace PanjiNamjaElf\Kaguya\Tests;
 
-class TestConsole extends TestCase
+class RunConsoleTest extends TestCase
 {
     public function testInstallCommand()
     {
