@@ -18,8 +18,7 @@
     ],
     "require": {
         "php": "^7.2.5",
-        "illuminate/support": "^6.0 | ^7.0",
-        "laravel/ui": "^2.0"
+        "illuminate/support": "^6.0 | ^7.0"
     },
     "require-dev": {
         "orchestra/testbench": "^5.0",
