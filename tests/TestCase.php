@@ -2,7 +2,6 @@
 
 /**
  * @author   Panji Setya Nur Prawira
- * @package  Kaguya
  */
 
 namespace PanjiNamjaElf\Kaguya\Tests;
@@ -35,11 +34,11 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        $this->app->setBasePath(__DIR__ . '/../');
+        $this->app->setBasePath(__DIR__.'/../');
 
         $this->loadMigrationsFrom([
             '--database' => 'testing',
-            '--path'     => realpath(__DIR__ . '/database/migrations'),
+            '--path'     => realpath(__DIR__.'/database/migrations'),
         ]);
     }
 
@@ -53,6 +52,6 @@ abstract class TestCase extends BaseTestCase
     protected function getEnvironmentSetUp($app)
     {
         $app['config']->set('app.debug', env('APP_DEBUG', true));
-        $app['config']->set('logging.channels.single.path', __DIR__ . '/../logs/kaguya_' . date('Y.m.d_His') . '.log');
+        $app['config']->set('logging.channels.single.path', __DIR__.'/../logs/kaguya_'.date('Y.m.d_His').'.log');
     }
 }
