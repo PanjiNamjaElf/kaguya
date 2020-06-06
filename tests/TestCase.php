@@ -34,7 +34,7 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        $this->app->setBasePath(__DIR__ . '/../');
+        $this->app->setBasePath(__DIR__.'/../');
 
         $this->loadMigrationsFrom([
             '--database' => 'testing',
