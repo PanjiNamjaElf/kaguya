@@ -61,7 +61,12 @@ jobs:
           composer update --${{ matrix.dependency }} --prefer-dist --no-interaction --no-suggest
 
       - name: Execute tests
-        run: vendor/bin/phpunit
+        run: ./vendor/bin/phpunit
+        env:
+          DB_PORT: ${{ job.services.mariadb.ports[3306] }}
+          DB_DATABASE: kaguya-testing
+          DB_USERNAME: kaguya
+          DB_PASSWORD: kaguya
 
       - name: Archive error logs
         uses: actions/upload-artifact@v1.0.0
