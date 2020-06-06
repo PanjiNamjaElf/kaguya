@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         verbose="true">
+    <testsuites>
+        <testsuite name="Kaguya Test Suite">
+            <directory suffix=".php">./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src/</directory>
+        </whitelist>
+    </filter>
+    <php>
+        <env name="APP_KEY" value="base64:h9rDncNEqhp+2xikZIjh3SbBchA9Sl8x6wyjT7mIi1Q="/>
+        <env name="DB_PORT" value="3306"/>
+        <env name="DB_DATABASE" value="kaguya-testing"/>
+        <env name="DB_USERNAME" value="kaguya"/>
+        <env name="DB_PASSWORD" value="kaguya"/>
+    </php>
+</phpunit>
