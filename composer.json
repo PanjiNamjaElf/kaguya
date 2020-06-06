@@ -1,0 +1,52 @@
+{
+    "name": "panjinamjaelf/kaguya",
+    "type": "library",
+    "description": "Save app settings on laravel framework.",
+    "keywords": [
+        "kaguya",
+        "settings",
+        "laravel",
+        "laravel settings",
+        "laravel app settings"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Panji Setya Nur Prawira",
+            "email": "PanjiNamjaElf@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "illuminate/support": "^6.0 | ^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0",
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "PanjiNamjaElf\\Kaguya\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PanjiNamjaElf\\Kaguya\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PanjiNamjaElf\\Kaguya\\KaguyaServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
