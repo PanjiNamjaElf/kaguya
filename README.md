@@ -49,6 +49,11 @@ If you want to reset your current settings to default value you can run this com
 php artisan kaguya:reset
 ```
 
+Add this following script on any view or controller to get settings page url
+```php
+route('settings');
+```
+
 ## View
 
 If you want to customize the view you can publish the view with this command
