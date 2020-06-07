@@ -3,6 +3,7 @@
 [![Software License](https://img.shields.io/github/license/PanjiNamjaElf/kaguya?style=flat-square)](LICENSE.md)
 [![StyleCI](https://styleci.io/repos/270025326/shield?branch=master)](https://styleci.io/repos/270025326)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/panjinamjaelf/kaguya/Run%20PHPUnit%20tests?label=tests&style=flat-square)
+![Run PHPUnit tests](https://github.com/panjinamjaelf/kaguya/workflows/Run%20PHPUnit%20tests/badge.svg)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/panjinamjaelf/kaguya.svg?style=flat-square)](https://packagist.org/packages/panjinamjaelf/kaguya)
 
 Laravel package used to store your app settings.
