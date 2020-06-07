@@ -8,11 +8,18 @@ namespace PanjiNamjaElf\Kaguya\Tests;
 
 class HelpersTest extends TestCase
 {
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->artisan('kaguya:install');
+    }
+
     public function testAddNewSetting()
     {
-        setting()->add('app_name', 'Kaguya Package');
+        setting()->add('example_setting_name', 'Kaguya Package');
 
-        $setting = \DB::table('settings')->where('name', '=', 'app_name')->first();
+        $setting = \DB::table('settings')->where('name', '=', 'example_setting_name')->first();
 
         $this->assertEquals('Kaguya Package', $setting->value);
     }
